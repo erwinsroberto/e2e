@@ -9,6 +9,6 @@ module.exports = {
         "sourceType": "module"
     },
     "rules": {
-        "faker/faker": true
+        "faker/faker": 1
     }
 };
