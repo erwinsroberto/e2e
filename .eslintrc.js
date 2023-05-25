@@ -1,8 +1,7 @@
 module.exports = {
     "env": {
         "browser": true,
-        "es2021": true,
-        "faker/faker": true
+        "es2021": true        
     },
     "extends": "eslint:recommended",
     "parserOptions": {
@@ -10,5 +9,6 @@ module.exports = {
         "sourceType": "module"
     },
     "rules": {
+        "faker/faker": true
     }
 };
