@@ -35,15 +35,15 @@ describe('Scenarios where authentication is a pre-requirement', () => {
   it.only('logs out', () =>{
     cy.visit('/')
     cy.wait('@getNotes', {timeout: 15000})
-    
+
     if (Cypress.config('viewportWidth') < Cypress.env('viewportWidthBreakpoint')) {
       cy.get('.navbar-toggle.collapsed')
         .should('be.visible')
         .click()
     }
     /* ==== Generated with Cypress Studio ==== */
-    cy.get('.nav > :nth-child(2) > a').click();
-    cy.get('#email').should('be.visible');
+    cy.get('.nav > :nth-child(2) > a').click()
+    cy.get('#email').should('be.visible')
     /* ==== End Cypress Studio ==== */
   })
 })
