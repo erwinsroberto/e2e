@@ -4,7 +4,6 @@
         "commonjs": true,
         "es2021": true,
         "node": true,
-        "faker/faker": true
     },
     "extends": "eslint:recommended",
     "parserOptions": {
