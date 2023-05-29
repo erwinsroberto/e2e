@@ -17,7 +17,7 @@ Cypress.Commands.add('login', (
     cy.get('#email').type(username)
     cy.get('#password').type(password, { log: false })
     cy.contains('button', 'Login').click()
-    cy.contains('h1', 'Your Notes', {timeout: 3000}).should('be.visible')
+    cy.contains('h1', 'Your Notes', {timeout: 5000}).should('be.visible')
   }
 
   if (cacheSession) {
