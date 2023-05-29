@@ -9,16 +9,16 @@ describe('Scenarios where authentication is a pre-requirement', () => {
     const noteDescription = faker.lorem.words(4)
 
     cy.createNote(noteDescription)
-    cy.wait('@getNotes', {timeout: 15000})
+    cy.wait('@getNotes', {timeout: 5000})
 
     const updatedNoteDescription = faker.lorem.words(4)
     const attachFile = true
 
     cy.editNote(noteDescription, updatedNoteDescription, attachFile)
-    cy.wait('@getNotes', {timeout: 15000})
+    cy.wait('@getNotes', {timeout: 5000})
 
     cy.deleteNote(updatedNoteDescription)
-    cy.wait('@getNotes', {timeout: 15000})
+    cy.wait('@getNotes', {timeout: 5000})
   })
 
   it('successfully submits the form', () => {
@@ -34,7 +34,7 @@ describe('Scenarios where authentication is a pre-requirement', () => {
 
   it.only('logs out', () =>{
     cy.visit('/')
-    cy.wait('@getNotes', {timeout: 15000})
+    cy.wait('@getNotes', {timeout: 5000})
 
     if (Cypress.config('viewportWidth') < Cypress.env('viewportWidthBreakpoint')) {
       cy.get('.navbar-toggle.collapsed')

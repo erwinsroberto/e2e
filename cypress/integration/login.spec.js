@@ -5,5 +5,5 @@ it('successfully logs in', () => {
     Cypress.env('USER_PASSWORD'),
     {cacheSession: false}
   )
-  cy.wait('@getNotes', {timeout: 15000})
+  cy.wait('@getNotes', {timeout: 5000})
 })

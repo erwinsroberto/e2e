@@ -4,7 +4,7 @@ Cypress.Commands.add('fillSignupFormAndSubmit', (email, password) => {
   cy.get('#password').type(password, { log: false })
   cy.get('#confirmPassword').type(password, { log: false })
   cy.contains('button', 'Signup').click()
-  cy.get('#confirmationCode').should('be.visible')
+  cy.get('#confirmationCode', {timeout: 5000}).should('be.visible')
 })
 
 Cypress.Commands.add('login', (
